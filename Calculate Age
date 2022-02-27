@@ -1,0 +1,5 @@
+a = int(input("Enter current year"))
+b = int(input("Enter the year of birth"))
+c = a-b
+
+print("your age is" , c)
