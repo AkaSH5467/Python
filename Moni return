@@ -1,0 +1,7 @@
+a=int(input("Enter the price of the item"))
+c=int(input("Enter quantity"))
+b=int(input("Enter the paid to shopkeeper"))
+
+d=b-(a*c)
+
+print(d)
