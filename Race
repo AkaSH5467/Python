@@ -1,0 +1,27 @@
+
+# Lets say you are running a 5 km race. Write a program that,
+
+# Upon completing each 1 km asks you "are you tired?"
+# If you reply "yes" then it should break and print "you didn't finish the race"
+# If you reply "no" then it should continue and ask "are you tired" on every km
+# If you finish all 5 km then it should print congratulations message
+
+
+
+for i in range(5):
+   
+    a=input('Are you tired?  Y/N')
+    
+    if a=='N':
+        continue
+    elif a=='Y':
+        print(f"you didnt finish the race at {i}km")
+        break;
+    else:
+        continue
+
+if i==5:
+    print("you have completed the test")
+else:
+    print("You have completed")
+        
