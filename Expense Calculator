@@ -1,0 +1,18 @@
+
+monthly=['January','february','march','april','may']
+
+expense_list = [2340, 2500, 2100, 3100, 2980]
+
+a=int(input('Enter the expense'))
+
+month=-1
+
+for i in range(len(expense_list)):
+    if a==expense_list[i]:
+        month=i;
+        break
+if month!= -1:
+    print(f"you have spent these {a}rs in {monthly[month]}")
+else:
+    print("not in the list")
+
