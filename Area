@@ -1,0 +1,19 @@
+# Modify above function to take third parameter shape type. It can be either "triangle" or "rectangle". Based on shape type it will calculate area. Equation of rectangle's area is,
+# rectangle area=length*width
+def Area(x,y,types='triangle'):
+    area=0
+    if types=='rectangle':
+        area=x*y
+        print(f"{types} area was {area}")
+        
+        
+    
+    else:
+        area=0.5*x*y
+        print(f"{types}area was {area}")
+
+a=int(input("Enter the base "))
+b=int(input("Enter the height "))
+s=0
+Area(a,b,'rectangle')
+   
