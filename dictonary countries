@@ -1,0 +1,27 @@
+countries={
+    "India":'145',
+    "china":'234',
+    "USA": "32",
+    "Pakistan":"22"
+    
+}
+
+a=int(input("Enter your choice: "" 1. print  2.Add  3.Remove  "))
+
+if(a==1):
+    for i in countries:
+        print(i,"==>",countries[i])
+
+elif(a==2):
+    p=input("Enter the country ")
+    q=input("number you want to add")
+    countries[p]=q
+    print(countries)
+elif(a==3):
+    p=input("Enter the country you want to remove")
+    countries.pop(p)
+    print(countries)
+else:
+    print("fuckk off")
+
+    
