@@ -1,0 +1,25 @@
+a=int(input("Enter the size of the list "))
+
+s=[]
+
+for i in range(a):
+    n=int(input(f"Enter the data of {i+1}th month " ))
+    s.append(n)
+    
+print(s)
+
+m=s[1]-s[0]
+print("difference between the expense in Jan and Feb " +str(m))
+
+p=s[1]+s[2]+s[3]
+print("first Quater " + str(p))
+
+for i in range(len(s)):
+    if(s[i]==200):
+        print(i);
+
+s.append(1980)
+print(s)
+
+s[3]=s[3]+200
+print(s)
