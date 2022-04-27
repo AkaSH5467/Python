@@ -1,0 +1,92 @@
+class Node:
+    def __init__(self,data,link):          #creating the data and link part
+        self.data=data
+        self.link=link
+class LinkedList:                          #creation of class LL
+    def __init__(self):
+        self.head = None                   #declaring head as None
+        
+    def insBeg(self,data):
+         node = Node(data, self.head)        # node=new Node(data, self.head)
+         self.head = node                    #head=ptr
+
+    def Print(self):
+        itr=self.head                       #itr as head
+        llstr=''                            #string to display
+        while itr:                          #iterating till end
+            suffix=''                       #character created
+            if itr.link:                    #if link exsist then
+                suffix='-->'                #add suffix
+            llstr += str(itr.data)+suffix    #display
+            itr=itr.link                    #iterate
+        print(llstr)                        #print
+    def getLen(self):
+        itr=self.head
+        count=0
+        while itr:
+            count +=1
+            itr=itr.link
+        return count
+    
+    
+    def InsEnd(self, data):
+        if self.head is None:
+            self.head = Node(data, None)
+            return
+
+        itr = self.head
+
+        while itr.link:
+            itr = itr.link
+
+        itr.link = Node(data, None)
+        
+    def InsAtP(self,index,data):
+        if index<0 or index > self.getLen():
+            raise Exception("Invalid Bencho")
+        if index==0:
+            self.insBeg(data)
+        
+        itr=self.head
+        count=0
+        while itr:
+            if count == index-1:
+                node = Node(data,itr.link)
+                itr.link=node
+                break
+            itr=itr.link
+            count +=1
+    
+    def remove_at(self, index):
+        if index<0 or index>=self.get_length():
+            raise Exception("Invalid Index")
+
+        if index==0:
+            self.head = self.head.link
+            return
+
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index - 1:
+                itr.link = itr.link.link
+                break
+
+            itr = itr.link
+            count+=1
+            
+            
+    def insert_values(self, data_list):
+        self.head = None
+        for data in data_list:
+            self.insert_at_end(data)
+
+
+if __name__ == '__main__':
+    root=LinkedList()
+    root.insBeg(5)
+    root.insBeg(10)
+    root.InsEnd(78)
+    root.InsAtP(2,33)
+    print(root.getLen())
+    root.Print()
