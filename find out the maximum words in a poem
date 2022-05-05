@@ -1,0 +1,19 @@
+words={ }
+
+with open("poems.txt","r")as f:
+    for lines in f:
+        big = lines.split(" ")
+        for word in big:
+            if word in words:
+                words[word]=+1
+            else:
+                words[word]=1
+
+
+occur = list(words.values())
+maximum=max(occur)
+print("Mamimum Occurence",maximum)
+
+for word,count in words.items():
+    if count==maximum:
+        print(word)
