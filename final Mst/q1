@@ -1,0 +1,6 @@
+import sys
+T1=("Akash","Arjun","Anjuman")
+T2=("A",9,"potrugal",10)
+
+print("Size pf the tuple is "+str(sys.getsizeof(T1)) + 'bytes')
+print("Size pf the tuple is "+str(sys.getsizeof(T2)) + 'bytes')
